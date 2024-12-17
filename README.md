@@ -1,50 +1,19 @@
+
 # React + TypeScript + Vite
+# Packages/modules and install commands:
+  1. npm i - beacause of gitignore
+     
+  2. ## Dependencies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+     This project uses the following key dependencies:
 
-Currently, two official plugins are available:
+      - **framer-motion**: A powerful animation library for React, enabling smooth animations and transitions in your app.
+      - **react-anchor-link-smooth-scroll**: A library that adds smooth scrolling functionality to anchor links, providing a better user experience when navigating between sections of         the page.
+      - **@heroicons/react**: A collection of SVG icons for React, easy to integrate and customize.
+        
+  3. ### Development Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+     To install the necessary development dependencies, run the following command:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+      npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
+      npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
