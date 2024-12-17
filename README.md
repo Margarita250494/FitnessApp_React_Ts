@@ -19,3 +19,4 @@
       1. npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
       2. npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
       3. npm install -D tailwindcss postcss autoprefixer -> npx tailwindcss init -p
+      4. npm install -D prettier prettier-plugin-tailwindcss
