@@ -15,5 +15,5 @@
 
      To install the necessary development dependencies, run the following command:
 
-      npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
-      npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
+      1. npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
+      2. npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
