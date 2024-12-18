@@ -7,23 +7,24 @@ export default {
   theme: {
     extend: {
       colors:{
-        "gray-20": "#F8F4EB",
+        "gray-20": "#F9F9F9",
         "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
+        "gray-100": "#404040",
+
         "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
+        "primary-300": "#FF8F8C",
+        "primary-500": "#5E0000",
+
         "secondary-400": "#FFCD5B",
         "secondary-500": "#FFC132",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
+          "linear-gradient(90deg, #FFE1E0 0%, #FFCD5B 100%)",
         "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
       fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
+        dmsans: ["Heebo", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
