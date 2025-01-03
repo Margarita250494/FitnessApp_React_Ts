@@ -1,13 +1,11 @@
-
 import { useState } from "react";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.png";
-//import { Link } from "./Link";
 import { SelectedPage } from "@/shared/types";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { ActionButton } from "@/scenes/components/ActionButton";
 import { LinkItems } from "./LinkItems";
-
+import { flexBetween, hoverMenuButton } from "@/shared/helpers";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -16,11 +14,11 @@ type Props = {
 };
 
 export const Navbar = ({ isTopOfPage ,selectedPage, setSelectedPage }: Props) => {
-  const flexBetween = "flex items-center justify-between";
+
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const toggleMenu = () => setIsMenuToggled(prev => !prev);
-  const hoverMenuButton = "rounded-full bg-secondary-500 p-2 hover:bg-primary-500 duration-300"
+
   const navbarBG = isTopOfPage ? "" : "bg-gray-50 drop-shadow text-gray-100";
 
   return (
@@ -48,6 +46,7 @@ export const Navbar = ({ isTopOfPage ,selectedPage, setSelectedPage }: Props) =>
           )}
         </div>
       </div>
+      
       {/*Mobile Menu Modal */}
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
@@ -67,52 +66,3 @@ export const Navbar = ({ isTopOfPage ,selectedPage, setSelectedPage }: Props) =>
     </header>
   );
 };
-
-
-
-{/*<ul className={`${flexBetween} gap-8 text-sm`}>
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Benefits"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Our Classes"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Contact Us"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-            </ul>*/}
-
-
-{/*<ul className="ml-[33%] flex flex-col gap-10 text-2xl text-gray-100">
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Benefits"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Our Classes"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Contact Us"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-            </ul>*/}

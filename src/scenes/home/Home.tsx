@@ -3,10 +3,10 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 import { Sponsors } from "./Sponsors";
-import { animationSettings } from "@/shared/helpers";
+import { animationLeftToRight } from "@/shared/helpers";
+import { LearnMoreLink } from "../components/LearnMoreLink";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -30,7 +30,7 @@ export const Home = ({ setSelectedPage }: Props) => {
       >
         <div className="z-10 mt-32 md:basis-3/5">
           <motion.div
-            {...animationSettings}
+            {...animationLeftToRight}
             transition={{ duration: 0.5 }}
             className="md:-mt-20"
           >
@@ -48,7 +48,7 @@ export const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
 
           <motion.div
-            {...animationSettings}
+            {...animationLeftToRight}
             transition={{ delay: 0.2, duration: 0.5 }}
             className="mt-8 flex items-center gap-8"
           >
@@ -58,14 +58,9 @@ export const Home = ({ setSelectedPage }: Props) => {
             >
               Join Now
             </ActionButton>
-            <AnchorLink
-              aria-label="Learn more"
-              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
-            >
-              <p>Learn more</p>
-            </AnchorLink>
+            <LearnMoreLink
+              setSelectedPage={setSelectedPage}
+              page={SelectedPage.ContactUs}/>
           </motion.div>
         </div>
         <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">

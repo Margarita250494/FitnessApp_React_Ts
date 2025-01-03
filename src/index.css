@@ -16,6 +16,7 @@ body,
 .app{
     /*height: 100%;
     width: 100%;*/
+    width: 100%;
     font-family: "Heebo", serif;
     font-weight: 400;
     @apply text-primary-100;
