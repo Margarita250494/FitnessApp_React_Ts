@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { page: "Home", id: SelectedPage.Home },
   { page: "Benefits", id: SelectedPage.Benefits },
   { page: "Our Classes", id: SelectedPage.OurClasses },
-  { page: "Contact Us", id: SelectedPage.ContsctUs },
+  { page: "Contact Us", id: SelectedPage.ContactUs },
 ];
 
 export const LinkItems = ({

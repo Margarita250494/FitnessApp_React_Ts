@@ -5,7 +5,7 @@ import Logo from "@/assets/Logo.png";
 //import { Link } from "./Link";
 import { SelectedPage } from "@/shared/types";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { ActionButton } from "@/components/ActionButton";
+import { ActionButton } from "@/scenes/components/ActionButton";
 import { LinkItems } from "./LinkItems";
 
 

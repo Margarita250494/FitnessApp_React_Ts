@@ -1,4 +1,4 @@
-import { ActionButton } from "@/components/ActionButton";
+import { ActionButton } from "@/scenes/components/ActionButton";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import HomePageText from "@/assets/HomePageText.png";
@@ -61,8 +61,8 @@ export const Home = ({ setSelectedPage }: Props) => {
             <AnchorLink
               aria-label="Learn more"
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContsctUs)}
-              href={`#${SelectedPage.ContsctUs}`}
+              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+              href={`#${SelectedPage.ContactUs}`}
             >
               <p>Learn more</p>
             </AnchorLink>
