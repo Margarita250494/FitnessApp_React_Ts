@@ -6,6 +6,7 @@ import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 import { Sponsors } from "./Sponsors";
+import {animationSettings} from '@/shared/helpers'
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -13,19 +14,10 @@ type Props = {
 
 export const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-  const animationSettings = {
-    initial: "hidden",
-    whileInView: "visible",
-    viewport: { once: true, amount: 0.5 },
-    variants: {
-      hidden: { opacity: 0, x: -50 },
-      visible: { opacity: 1, x: 0 },
-    },
-  };
-
+  
   return (
     <section id="home" className="gap-16 py-10 md:h-full md:pb-0" aria-labelledby="home-title">
-        <h1 id="home-title" className="sr-only">Welcome to Evolve Gym</h1>
+        <h1 id="home-title" className="sr-only">Evolve: evolutionary fitness</h1>
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
