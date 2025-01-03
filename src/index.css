@@ -21,12 +21,3 @@ body,
     @apply text-primary-100;
 }
 
-.svgCurve{
-    position: absolute;
-    top: 0;
-    left: -99px;
-    width: 300px;
-    height: 100%;
-    fill: #FFE1E0;
-    stroke: none;
-}

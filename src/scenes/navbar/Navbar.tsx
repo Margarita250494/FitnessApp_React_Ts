@@ -12,17 +12,19 @@ import { LinkItems } from "./LinkItems";
 type Props = {
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  isTopOfPage:boolean;
 };
 
-export const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
+export const Navbar = ({ isTopOfPage ,selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const toggleMenu = () => setIsMenuToggled(prev => !prev);
   const hoverMenuButton = "rounded-full bg-secondary-500 p-2 hover:bg-primary-500 duration-300"
+  const navbarBG = isTopOfPage ? "" : "bg-gray-50 drop-shadow text-gray-100";
 
   return (
-    <header className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+    <header className={`${navbarBG} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
       <div className={`${flexBetween} mx-auto w-5/6`}>
         <div className={`${flexBetween} w-full gap-16`}>
           <img src={Logo} alt="Company Name Logo - Evogym" />
@@ -34,7 +36,7 @@ export const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                 setSelectedPage={setSelectedPage} />
               <div className={`${flexBetween} gap-8`}>
                 <a href="#sign-in">Sign In</a>
-                <ActionButton setSelectedPage={setSelectedPage}>
+                <ActionButton ariaLabel="Become a Member" setSelectedPage={setSelectedPage}>
                   Become a Member
                 </ActionButton>
               </div>
