@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { Sponsors } from "./Sponsors";
 import { animationLeftToRight } from "@/shared/helpers";
 import { LearnMoreLink } from "../components/LearnMoreLink";
+import { TagPDescription } from "../components/TagPDescription";
+import { descriptionP } from "@/shared/dateBaseDesc";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -39,12 +41,9 @@ export const Home = ({ setSelectedPage }: Props) => {
                 <img src={HomePageText} alt="" />
               </div>
             </div>
-
-            <p className="mt-8 text-sm md:text-start">
-              Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
-              Studios to get the Body Shapes That you Dream of.. Get Your Dream
-              Body Now.
-            </p>
+            <TagPDescription className="mt-8 text-sm md:text-start">
+                {descriptionP.homeIntro}
+            </TagPDescription>
           </motion.div>
 
           <motion.div

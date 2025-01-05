@@ -14,7 +14,7 @@ export const LearnMoreLink = ({ setSelectedPage, page}: LearnMoreLinkProps) => {
       onClick={() => setSelectedPage(page)}
       href={`#${page}`}
     >
-      <p>Learn more</p> {/* Der Linktext wird direkt verwendet */}
+      <p>Learn more</p> 
     </AnchorLink>
   );
 };

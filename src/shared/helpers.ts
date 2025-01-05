@@ -1,4 +1,3 @@
-
 //Navbar
 
 export const flexBetween = "flex items-center justify-between";
@@ -49,4 +48,6 @@ export const animationRightToLeft = {
     visible: { opacity: 1, x: 0 },
   },
 };
+
+
 
