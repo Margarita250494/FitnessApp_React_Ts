@@ -1,5 +1,11 @@
 
 # React + TypeScript + Vite
+## About This Project
+
+This project is based on the YouTube tutorial by [EdRoh](https://www.youtube.com/watch?v=I2NNxr3WPDo&t=13558s). While the tutorial served as a foundational guide, the design and code have been modified to better suit the needs of this project.
+
+Feel free to check out the original tutorial for additional insights and a deeper understanding of the concepts.
+
 # Packages/modules and install commands:
   1. npm i - beacause of gitignore
      
