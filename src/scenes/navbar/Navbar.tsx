@@ -5,7 +5,7 @@ import { SelectedPage } from "@/shared/types";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { ActionButton } from "@/scenes/components/ActionButton";
 import { LinkItems } from "./LinkItems";
-import { flexBetween, hoverMenuButton } from "@/shared/helpers";
+import { navbarStyles } from "@/shared/helpers";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -22,24 +22,24 @@ export const Navbar = ({ isTopOfPage ,selectedPage, setSelectedPage }: Props) =>
   const navbarBG = isTopOfPage ? "" : "bg-gray-50 drop-shadow text-gray-100";
 
   return (
-    <header className={`${navbarBG} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
-      <div className={`${flexBetween} mx-auto w-5/6`}>
-        <div className={`${flexBetween} w-full gap-16`}>
+    <header className={`${navbarBG} ${navbarStyles.flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div className={`${navbarStyles.flexBetween} mx-auto w-5/6`}>
+        <div className={`${navbarStyles.flexBetween} w-full gap-16`}>
           <img src={Logo} alt="Company Name Logo - Evogym" />
           {isAboveMediumScreens ? (
-            <nav className={`${flexBetween} w-full`}>
+            <nav className={`${navbarStyles.flexBetween} w-full`}>
               <LinkItems
-                className={`${flexBetween} gap-8 text-sm`}
+                className={`${navbarStyles.flexBetween} gap-8 text-sm`}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />
-              <div className={`${flexBetween} gap-8`}>
+              <div className={`${navbarStyles.flexBetween} gap-8`}>
                 <a href="#sign-in">Sign In</a>
                 <ActionButton ariaLabel="Become a Member" setSelectedPage={setSelectedPage}>
                   Become a Member
                 </ActionButton>
               </div>
             </nav>) : (
-            <button aria-label="open Mobile menu" className={hoverMenuButton}
+            <button aria-label="open Mobile menu" className={navbarStyles.hoverMenuButton}
               onClick={toggleMenu}>
               <Bars3BottomRightIcon className="h-6 w-6 text-gray-100 hover:text-gray-50 duration-300" />
             </button>
@@ -51,7 +51,7 @@ export const Navbar = ({ isTopOfPage ,selectedPage, setSelectedPage }: Props) =>
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
           <div className="flex justify-end p-12">
-            <button onClick={toggleMenu} aria-label="Close Mobile menu" className={hoverMenuButton}>
+            <button onClick={toggleMenu} aria-label="Close Mobile menu" className={navbarStyles.hoverMenuButton}>
               <XMarkIcon className="h-6 w-6 text-gray-100 hover:text-gray-20" />
             </button>
           </div>

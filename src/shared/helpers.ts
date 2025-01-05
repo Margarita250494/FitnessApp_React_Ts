@@ -1,7 +1,8 @@
 //Navbar
-
-export const flexBetween = "flex items-center justify-between";
-export const hoverMenuButton = "rounded-full bg-secondary-500 p-2 hover:bg-primary-500 duration-300"
+export const navbarStyles = {
+  flexBetween: "flex items-center justify-between",
+  hoverMenuButton: "rounded-full bg-secondary-500 p-2 hover:bg-primary-500 duration-300",
+};
 
 //Home.tsx
 export const animationLeftToRight = {
@@ -50,11 +51,14 @@ export const animationRightToLeft = {
 };
 
 //Our classes
-
 export const overlayStyles = `p-5 absolute z-30 flex h-[380px] w-[450px] flex-col items-center justify-center whitespace-normal bg-primary-500 text-center text-white opacity-0 transition duration-500 hover:opacity-90`;
 
 //ContactUs
-
 export const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
 px-5 py-3 placeholder-white`;
 
+//footer
+export const footerStyles = {
+  linkClass:"hover:text-secondary-500 duration-200",
+  headerClass:"font-bold text-primary-300"
+}
