@@ -1,6 +1,6 @@
 
 type Props = {
-    children:string,
+    children:React.ReactNode,
     className:string
 }
 

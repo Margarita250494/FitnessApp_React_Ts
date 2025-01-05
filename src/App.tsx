@@ -3,6 +3,9 @@ import { Navbar } from "@/scenes/navbar/Navbar"
 import { SelectedPage } from "@/shared/types";
 import { Home } from "./scenes/home/Home";
 import { Benefits } from "./scenes/benefits/Benefits";
+import { OurClasses } from "./scenes/ourClasses/OurClasses";
+import { ContactUs } from "./scenes/contactUs/ContactUs";
+import { Footer } from "./scenes/footer/Footer";
 
 
 
@@ -28,9 +31,13 @@ export const App = () => {
         isTopOfPage = {isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}/>
-      <Home setSelectedPage={setSelectedPage}/>  
-      <Benefits setSelectedPage={setSelectedPage}/>
-      
+      <main>
+        <Home setSelectedPage={setSelectedPage}/>  
+        <Benefits setSelectedPage={setSelectedPage}/>
+        <OurClasses setSelectedPage={setSelectedPage}/>
+        <ContactUs setSelectedPage={setSelectedPage} />
+      </main>  
+      <Footer/>
     </div>
   )
 }
